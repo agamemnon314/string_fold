@@ -15,3 +15,5 @@ void generate_elementary_blocks(const Block& block, size_t lb, std::unordered_se
 void write_solution(const std::unordered_map<std::string, std::vector<Block>>& selected_pattern_block_map, const std::string& file_path);
 
 void find_all_maximal_cliques(const std::vector<const Block*>& blocks, std::vector<std::unordered_set<int>>& maximal_cliques);
+
+double check_solution(const std::vector<std::string>& all_sequence, const std::unordered_map<std::string, std::vector<Block>>& selected_pattern_block_map);

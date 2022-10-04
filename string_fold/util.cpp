@@ -180,3 +180,39 @@ void find_all_maximal_cliques(const std::vector<const Block*>& blocks, std::vect
 		}
 	}
 }
+
+double check_solution(const std::vector<std::string>& all_sequence, const std::unordered_map<std::string, std::vector<Block>>& selected_pattern_block_map)
+{
+	double reduced_cost = 0.0;
+
+	std::map<size_t, std::vector<Block>> seq_id_blocks_map;
+
+	for (const auto& selected_pattern_blocks : selected_pattern_block_map)
+	{
+		const auto& pattern = selected_pattern_blocks.first;
+		reduced_cost -= pattern.size() * 0.6;
+		const auto& blocks = selected_pattern_blocks.second;
+		for (const auto& block : blocks) {
+			if (all_sequence[block.get_sequence_id()].substr(block.get_start_pos(), block.get_block_size()) != pattern) {
+				std::cout << "block pattern error!!!!" << std::endl;
+			}
+			reduced_cost += 0.8 * pattern.size();
+			seq_id_blocks_map[block.get_sequence_id()].push_back(block);
+		}
+	}
+
+	for (const auto& seq_id_blocks : seq_id_blocks_map) {
+		const auto& blocks = seq_id_blocks.second;
+		for (size_t i = 0; i < blocks.size() - 1; i++)
+		{
+			for (size_t j = i + 1; j < blocks.size(); j++)
+			{
+				if (blocks[i].is_overlap(blocks[j])) {
+					std::cout << "blocks overlap error!!!!" << std::endl;
+				}
+			}
+		}
+	}
+
+	return reduced_cost;
+}

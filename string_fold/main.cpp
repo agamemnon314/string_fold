@@ -77,6 +77,12 @@ int main()
     std::cout << "The number of patterns is " << selected_pattern_block_map.size() << std::endl;
 
 	write_solution(selected_pattern_block_map, "D:/Workspace/sequence_folding/solution.txt");
+    auto reduced_cost = check_solution(all_sequence, selected_pattern_block_map);
+	std::cout << "The total reduced cost is " << reduced_cost << std::endl;
+
+
+
+
 	write_solution(pattern_block_map, "D:/Workspace/sequence_folding/pattern_block.txt");
 
 
@@ -85,6 +91,8 @@ int main()
 		pattern_block_map[block.get_substring()].push_back(block);
 	}
 	write_solution(pattern_block_map, "D:/Workspace/sequence_folding/maximal_block.txt");
+
+    
 
 
     return 0;
