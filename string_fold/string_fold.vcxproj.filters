@@ -21,15 +21,21 @@
     <ClCompile Include="util.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Pattern.cpp">
+    <ClCompile Include="block.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="milp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Pattern.h">
+    <ClInclude Include="block.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="milp.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

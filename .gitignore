@@ -36,3 +36,5 @@
 x64/Debug/string_fold.pdb
 x64/Release/output.txt
 x64/Release/string_fold.pdb
+.vs/
+string_fold/x64

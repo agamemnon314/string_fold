@@ -1,0 +1,124 @@
+
+Log started (V22.1.0.0) Tue Oct  4 13:39:12 2022
+
+
+Problem 'model.lp' read.
+Read time = 0.00 sec. (0.00 ticks)
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+Found incumbent of value 0.000000 after 0.02 sec. (0.00 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 7 rows and 0 columns.
+Reduced MIP has 15 rows, 16 columns, and 36 nonzeros.
+Reduced MIP has 16 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.03 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 15 rows, 16 columns, and 36 nonzeros.
+Reduced MIP has 16 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.03 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+Clique table members: 15.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 12 threads.
+Root relaxation solution time = 0.00 sec. (0.02 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000      852.0000              --- 
+*     0+    0                          156.6000      852.0000           444.06%
+*     0+    0                          184.0000      852.0000           363.04%
+      0     0      187.5000     9      184.0000      187.5000       13    1.90%
+      0     0        cutoff            184.0000                     14     --- 
+Elapsed time = 0.05 sec. (0.17 ticks, tree = 0.01 MB, solutions = 3)
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (0.17 ticks)
+Parallel b&c, 12 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.05 sec. (0.17 ticks)
+
+Solution pool: 3 solutions saved.
+
+MIP - Integer optimal solution:  Objective =  1.8400000000e+02
+Solution time =    0.05 sec.  Iterations = 14  Nodes = 0
+Deterministic time = 0.17 ticks  (3.68 ticks/sec)
+
+
+Problem 'model.lp' read.
+Read time = 0.00 sec. (0.00 ticks)
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+Found incumbent of value -120.600000 after 0.00 sec. (0.00 ticks)
+Tried aggregator 4 times.
+MIP Presolve eliminated 16 rows and 9 columns.
+Aggregator did 6 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.04 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.05 ticks)
+Parallel b&c, 12 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (0.05 ticks)
+
+Solution pool: 2 solutions saved.
+
+MIP - Integer optimal solution:  Objective =  1.0980000000e+02
+Solution time =    0.00 sec.  Iterations = 0  Nodes = 0 (1)
+Deterministic time = 0.05 ticks  (45.66 ticks/sec)
+
+
+Problem 'model.lp' read.
+Read time = 0.01 sec. (0.00 ticks)
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+Row 'c20' implies binary variable 'b_4' is negative.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.01 ticks)
+Parallel b&c, 12 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (0.01 ticks)
+
+
+MIP - Integer infeasible.
+Current MIP best bound =  7.3140000000e+02 (gap is infinite)
+Solution time =    0.00 sec.  Iterations = 0  Nodes = 0 (1)
+Deterministic time = 0.01 ticks  (5.45 ticks/sec)
+
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+
+Refine conflict on 32 members...
+
+ Iteration  Max Members  Min Members
+         1           24            0
+         2           20            0
+         3           10            0
+         4            6            0
+         5            3            0
+Warning:  Non-integral bounds for integer variables rounded.
+         6            3            1
+Warning:  Non-integral bounds for integer variables rounded.
+         7            3            2
+Warning:  Non-integral bounds for integer variables rounded.
+         8            3            3
+
+Minimal conflict:    1 linear constraint(s)
+                     2 lower bound(s)
+                     0 upper bound(s)
+Conflict computation time =    0.00 sec.  Iterations = 8
+Deterministic time = 0.04 ticks  (43.25 ticks/sec)
+No file written.
+
+Minimal conflict written to file 'a.clp'.
